@@ -16,6 +16,9 @@ input[name = search]{
     right:3%;
     bottom:3%;
 }
+    input[name = search]:focus {
+        outline-color: coral;
+    }
 footer {
     bottom: 0;
     border: 2px solid black;
