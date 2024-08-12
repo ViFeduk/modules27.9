@@ -1,0 +1,68 @@
+﻿header, main, footer {
+    background-color: antiquewhite;
+}
+.block {
+    border: 2px solid black;
+   position:relative;
+    padding: 10px;
+}
+
+.video-container {
+    display: inline-block;
+    text-align: center;
+}
+input[name = search]{
+    position: absolute;
+    right:3%;
+    bottom:3%;
+}
+footer {
+    bottom: 0;
+    border: 2px solid black;
+   
+    line-height: 66%;
+    padding-left:1%;
+}
+
+
+.navbar {
+    padding-left: 15%;
+}
+
+.navbar p{
+    color:wheat;
+}
+
+.navbar p:hover {
+    color:blueviolet;
+}
+
+.title h1{
+    color: dodgerblue
+}
+header {
+    color: black;
+    padding-left: 1%;
+    padding-top: 1.2%;
+}
+
+aside {
+    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+    width: 10%;
+    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+    top: 0; /* Сайдбар будет в самой верхней части страницы */
+    left: 0;
+    background-color: #111; /* Черный цвет фона (задан в виде кода) */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    padding-top: 20px;
+    color: wheat;
+}
+
+
+
+body {
+    padding-left: 11%;
+    background-color: antiquewhite;
+}
+
