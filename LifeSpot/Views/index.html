@@ -6,12 +6,29 @@
     <style>
     </style>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css"/>
+    <script src="../Static/JavaScript/govni.js"></script>
+    <script>  chekAge();
+        verification();
+        session();
+       
+    </script>
+    <script>
+       setTimeout(subscr, 10000)
+    </script>
+       
+   
+    
+    
 </head>
 <body>
+
+
     <aside>
         <div class=" navbar">
             <a href="/"> <p>Все трансляции</p></a>
-          <a href="/">  <p>О проекте</p></a>
+          <a href="/about">  <p>О проекте</p></a>
+          <a href="/testing">  <p>Тестирование</p></a>
+
         </div>
         
     </aside>
@@ -21,7 +38,7 @@
         <div class="block">
             <h1>LifeSpot — прямые трансляции с улиц</h1>
             <h3>Покажем, что происходит прямо сейчас</h3>
-            <input type="text" name="search"/>
+            <input type="text" name="search" oninput="filterContent();" size=50%/>
 
         </div>
     </header>
@@ -30,18 +47,18 @@
         <div class="block">
             <div class="video-container">
                 <h3>Москва</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tgp1Kjtzbmw?si=LxsmJ9Og_1wy9e6S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" name="москва" height="315" src="https://www.youtube.com/embed/tgp1Kjtzbmw?si=LxsmJ9Og_1wy9e6S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
 
             <div class="video-container">
                 <h3>Нью-Йорк</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fkv9yxnFlE4?si=lJjMJ0ddo4L7JJ5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" name="Нью-Йорк"height="315" src="https://www.youtube.com/embed/Fkv9yxnFlE4?si=lJjMJ0ddo4L7JJ5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
             <div class="video-container">
                 <h3>Лондон</h3>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KSsfLxP-A9g?si=52bGHLFPIfVCjI3u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" name ="Лондон" height="315" src="https://www.youtube.com/embed/KSsfLxP-A9g?si=52bGHLFPIfVCjI3u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
 
