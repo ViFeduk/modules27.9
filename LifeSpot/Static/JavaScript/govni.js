@@ -1,33 +1,45 @@
-let info = new Map();
-function verification() {
+
+function verification(session, checker) {
     
-    let userAgent = window.navigator.userAgent;
-    info.set("userAgent", userAgent);
+    
+    if (window.sessionStorage.getItem("userAgent") == null) {
+        window.sessionStorage.setItem("userAgent", window.navigator.userAgent);
+    }
+    if (window.sessionStorage.getItem("time") == null) {
+        window.sessionStorage.setItem("time", new Date());
+    }
+    if (window.sessionStorage.getItem("age") == null) {
+        let input = prompt("Пожалуйста, введите ваш возраст?");
+        window.sessionStorage.setItem("age", input);
+        checker(true)
+    }
+    else {
+        checker(false);
+    }
    
-    info.set("time", new Date());
+    session();
     
 }
 let subscr = function () {
     alert("Подпишитесь на нас!!!! ");
 }
-function chekAge() {
-
-    let age = prompt("Введите ваш возраст");
-   
-    if (age < 18) {
-        alert("Ваш возраст меньше 18 ");
-        window.location.href = "http://www.google.com";
+function checker(firstVisit){
+    if (window.sessionStorage.getItem("age") >= 18) {
+        if (firstVisit) {
+            alert("Приветствуем на LifeSpot! " + '\n' + "Текущее время: " + new Date().toLocaleString());
+        }
     }
     else {
-        alert("Поздравляю вам доступен доступ к сайту");
-        info.set("age", age);
+        alert("Наши трансляции не предназначены для лиц моложе 18 лет. Вы будете перенаправлены");
+        window.location.href = "http://www.google.com"
     }
 }
 
 let session = function sessionLog() {
-    for (let result of info) {
-        console.log(result)
-    }
+    console.log("Данные клиента : " + window.sessionStorage.getItem("userAgent"));
+    console.log("Возраст пользователя : " + window.sessionStorage.getItem("age"));
+    console.log("Время : " + window.sessionStorage.getItem("time"));
+    
 }
 
 let valueInput = function () { return document.querySelector('input').value.toLowerCase(); }
